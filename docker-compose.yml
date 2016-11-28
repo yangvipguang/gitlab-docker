@@ -89,7 +89,7 @@ services:
     - IMAP_HOST=imap.travelrely.com
     - IMAP_PORT=143
     - IMAP_USER=yangguang@travelrely.com
-    - IMAP_PASS=YgQQ5210
+    - IMAP_PASS=MAIL_PASSWORD
     - IMAP_SSL=false
     - IMAP_STARTTLS=false
 
