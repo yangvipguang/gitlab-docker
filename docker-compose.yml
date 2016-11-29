@@ -81,7 +81,7 @@ services:
     - SMTP_HOST=smtp.travelrely.com
     - SMTP_PORT=25
     - SMTP_USER=yangguang@travelrely.com
-    - SMTP_PASS=YgQQ5210
+    - SMTP_PASS=
     - SMTP_STARTTLS=false
     - SMTP_AUTHENTICATION=login
 
