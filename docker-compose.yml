@@ -30,8 +30,8 @@ services:
     - redis
     - postgresql
     ports:
-    - "10080:80"
-    - "10022:22"
+    - "1080:80"
+    - "1022:22"
     volumes:
     -/Users/git/lxsj/docker/gitlab/gitlab:/home/git/data:Z
     environment:
