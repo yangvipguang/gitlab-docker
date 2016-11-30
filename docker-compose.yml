@@ -2,7 +2,7 @@ version: '2'
 
 services:
   redis:
-    container_name: gitlab_redis
+    container_name: gitlab-redis
     restart: always
     image: sameersbn/redis:latest
     command:
@@ -11,7 +11,7 @@ services:
     - /Users/git/lxsj/docker/gitlab/redis:/var/lib/redis:Z
 
   postgresql:
-    container_name: gitlab_postgresql
+    container_name: gitlab-postgresql
     restart: always
     image: sameersbn/postgresql:9.4-22
     volumes:
@@ -64,14 +64,14 @@ services:
     - GITLAB_SECRETS_OTP_KEY_BASE=long-and-random-alphanumeric-string
 
     - GITLAB_ROOT_PASSWORD=
-    - GITLAB_ROOT_EMAIL=yangguang@travelrely.com
+    - GITLAB_ROOT_EMAIL=lubaoxin@travelrely.com
 
     - GITLAB_NOTIFY_ON_BROKEN_BUILDS=true
     - GITLAB_NOTIFY_PUSHER=false
 
-    - GITLAB_EMAIL=yangguang@travelrely.com
-    - GITLAB_EMAIL_REPLY_TO=yangguang@travelrely.com
-    - GITLAB_INCOMING_EMAIL_ADDRESS=yangguang@travelrely.com
+    - GITLAB_EMAIL=lubaoxin@travelrely.com
+    - GITLAB_EMAIL_REPLY_TO=lubaoxin@travelrely.com
+    - GITLAB_INCOMING_EMAIL_ADDRESS=lubaoxin@travelrely.com
 
     - GITLAB_BACKUP_SCHEDULE=daily
     - GITLAB_BACKUP_TIME=01:00
@@ -80,15 +80,15 @@ services:
     - SMTP_DOMAIN=travelrely.com
     - SMTP_HOST=smtp.travelrely.com
     - SMTP_PORT=25
-    - SMTP_USER=yangguang@travelrely.com
+    - SMTP_USER=lubaoxin@travelrely.com
     - SMTP_PASS=
     - SMTP_STARTTLS=false
     - SMTP_AUTHENTICATION=login
 
     - IMAP_ENABLED=false
-    - IMAP_HOST=imap.travelrely.com
-    - IMAP_PORT=143
-    - IMAP_USER=yangguang@travelrely.com
+    - IMAP_HOST=
+    - IMAP_PORT=
+    - IMAP_USER=
     - IMAP_PASS=MAIL_PASSWORD
     - IMAP_SSL=false
     - IMAP_STARTTLS=false
