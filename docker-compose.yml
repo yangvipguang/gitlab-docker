@@ -8,14 +8,14 @@ services:
     command:
     - --loglevel warning
     volumes:
-    - /Users/git/lxsj/docker/gitlab/redis:/var/lib/redis:Z
+    - /home/docker/gitlab/redis:/var/lib/redis:Z
 
   postgresql:
     container_name: gitlab-postgresql
     restart: always
     image: sameersbn/postgresql:9.4-22
     volumes:
-    - /Users/git/lxsj/docker/gitlab/postgresql:/var/lib/postgresql:Z
+    - /home/docker/gitlab/postgresql:/var/lib/postgresql:Z
     environment:
     - DB_USER=gitlab
     - DB_PASS=password
@@ -33,7 +33,7 @@ services:
     - "1080:80"
     - "1022:22"
     volumes:
-    -/Users/git/lxsj/docker/gitlab/gitlab:/home/git/data:Z
+    -/home/docker/gitlab/gitlab:/home/git/data:Z
     environment:
     - DEBUG=false
     - NGINX_WORKERS=2
@@ -55,7 +55,7 @@ services:
     - GITLAB_HTTPS=false
     - SSL_SELF_SIGNED=false
 
-    - GITLAB_HOST=gitmini.travelrely.com
+    - GITLAB_HOST=gitmini.travelrely.com                ###访问的域名或者IP
     - GITLAB_PORT=80
     - GITLAB_SSH_PORT=22
     - GITLAB_RELATIVE_URL_ROOT=
