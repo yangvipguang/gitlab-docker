@@ -33,7 +33,7 @@ services:
     - "1080:80"
     - "1022:22"
     volumes:
-    -/home/docker/gitlab/gitlab:/home/git/data:Z
+    - /home/docker/gitlab/gitlab:/home/git/data:Z
     environment:
     - DEBUG=false
     - NGINX_WORKERS=2
